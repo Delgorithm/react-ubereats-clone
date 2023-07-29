@@ -26,12 +26,10 @@ This project is a clone of the Uber Eats app, built with React and Tailwind CSS.
 
 - React
 - Tailwind CSS
-- Axios (for API calls)
-- React Router (for navigation)
 
 ## Todo List
 
-- [❌] Conception and Planning
+- [✓] Conception and Planning
 - [❌] Environment and Configuration
 - [❌] Data Handling
 - [❌] Component Setup
