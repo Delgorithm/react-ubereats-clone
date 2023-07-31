@@ -26,6 +26,12 @@ This project is a clone of the Uber Eats app, built with React and Tailwind CSS.
 
 - React
 - Tailwind CSS
+- React Router
+- Redux
+- Axios
+- React Hook Form
+- React Testing Library
+- Stripe
 
 ## Todo List
 
