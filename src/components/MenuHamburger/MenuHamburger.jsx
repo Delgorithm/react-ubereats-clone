@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Authentification from '../Authentification/Authentification';
 
-const Hamburger = () => {
+const MenuHamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,7 +12,7 @@ const Hamburger = () => {
     <div>
       <div className='block'>
         <button
-          className="bg-gray-400 w-8 h-8 flex flex-col gap-1 mx-12 justify-center items-center"
+          className="w-8 h-8 flex flex-col gap-1 mx-12 justify-center items-center"
           onClick={toggleMenu}
         >
           <span className={isOpen ? 'w-5 h-0.5 bg-black transform rotate-45 translate-y-1.5 duration-500' : 'w-5 h-0.5 bg-black duration-500'}></span>
@@ -58,4 +58,4 @@ const Hamburger = () => {
   )
 }
 
-export default Hamburger;
+export default MenuHamburger;
