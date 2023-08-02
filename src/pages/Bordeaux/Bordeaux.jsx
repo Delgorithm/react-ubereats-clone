@@ -1,11 +1,20 @@
 import React from 'react'
-import Menu from '../../components/Menu/Menu'
+import Menu from '../../components/MenuHamburger/MenuHamburger'
 
 const Bordeaux = () => {
   return (
     <div>
         <h1>Bordeaux</h1>
         <Menu />
+        <div>
+        <h1>UberEats</h1>
+        <ul>
+          <li>
+            <a href="./Bordeaux">Bordeaux</a>
+            <a href="./Paris">Paris</a>
+          </li>
+        </ul>
+    </div>
     </div>
   )
 }
