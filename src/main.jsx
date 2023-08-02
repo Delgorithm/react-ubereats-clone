@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import Header from './components/Header/Header.jsx'
+import Hero from './components/Hero/Hero.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from './routes/error-page.jsx'
 import Home from './pages/Home/Home.jsx'

@@ -1,19 +1,14 @@
 import React from 'react'
-import MenuHamburger from '../../components/MenuHamburger/MenuHamburger'
-import Authentification from '../../components/Authentification/Authentification'
-import AuthentificationHeader from '../../components/Authentification/AuthentificationHeader'
+import Searching from '../../components/Searching/Searching'
+import Dropdown from '../../components/Dropdown/Dropdown'
+import Nav from '../../components/Nav/Nav'
+import Hero from '../../components/Hero/Hero.jsx'
 
 const Home = () => {
   return (
-    <section className="my-6 flex justify-between items-center bg-red-200">
-      <div className='flex items-center'>
-        <MenuHamburger />
-        <h1 className='text-3xl'>Uber Eats</h1>
-      </div>
-      <div className=''>
-        <AuthentificationHeader />
-      </div>
-    </section>
+    <div>
+      <Hero />
+    </div>
   )
 }
 
