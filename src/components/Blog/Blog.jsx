@@ -2,7 +2,7 @@ import React from 'react'
 
 const Blog = () => {
   return (
-    <div className='h-screen'>
+    <div className='min-h-20'>
         <div className="flex justify-around my-[80px] gap-10 mx-10">
             {getBlog().map((step, index) => (
                 <div key={index}>
