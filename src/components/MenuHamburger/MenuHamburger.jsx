@@ -44,7 +44,7 @@ const MenuHamburger = () => {
                 <li className='flex flex-col gap-2 m-6'>
                   <a href="#">Créez un compte professionnel</a>
                   <a href="#">Ajoutez voutre restaurant</a>
-                  <a href="#">Devenez un coursier-partneaire</a>
+                  <a href="#">Devenez un coursier-partenaire</a>
                 </li>
               </ul>
             </div>
