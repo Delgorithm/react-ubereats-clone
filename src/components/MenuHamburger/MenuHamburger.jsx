@@ -1,15 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Authentification from '../Authentification/Authentification';
 
 const MenuHamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleOutsideclick = (event ) => {
+    if (containerRef.current && !containerRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('click', handleOutsideclick);
+
+    return () => {
+      window.removeEventListener('click', handleOutsideclick);
+    };
+  }, []);
+
   return (
-    <div>
+    <div ref={containerRef}>
       <div className='block'>
         <button
           className="w-8 h-8 flex flex-col gap-1 mx-12 justify-center items-center"
@@ -21,9 +36,9 @@ const MenuHamburger = () => {
         </button>
       </div>
       {isOpen && (
-        <nav className='absolute'>
-          <div className="w-80 max-w-80 min-h-screen flex flex-col justify-between bg-gray-500">
-            <div className="flex flex-col">
+        <nav className='absolute left-0 top-0 '>
+          <div className="w-80 max-w-80 min-h-screen flex flex-col justify-between bg-gray-100">
+            <div className="flex flex-col my-4">
               <Authentification />
               <ul>
                 <li className='flex flex-col gap-2 m-6'>
