@@ -27,7 +27,7 @@ const MenuHamburger = () => {
     <div ref={containerRef}>
       <div className='block'>
         <button
-          className="w-8 h-8 flex flex-col gap-1 mx-12 justify-center items-center"
+          className="w-8 h-8 flex flex-col gap-2 lg-gap-1 lg-mx-12 justify-center items-center"
           onClick={toggleMenu}
         >
           <span className={isOpen ? 'w-5 h-0.5 bg-black transform rotate-45 translate-y-1.5 duration-500' : 'w-5 h-0.5 bg-black duration-500'}></span>
@@ -37,7 +37,7 @@ const MenuHamburger = () => {
       </div>
       {isOpen && (
         <nav className='absolute left-0 top-0 '>
-          <div className="w-80 max-w-80 min-h-screen flex flex-col justify-between bg-gray-100">
+          <div className="w-80 h-screen flex flex-col justify-between bg-gray-100">
             <div className="flex flex-col my-4">
               <Authentification />
               <ul>

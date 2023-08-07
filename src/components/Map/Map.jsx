@@ -9,7 +9,7 @@ const Map = () => {
           <p className='text-4xl font-bold'>Villes à proximité</p>
           <a className="underline"href="#">Afficher toutes les villes (+ de 1)</a>
         </div>
-        <div className='relative'>
+        <div className='relative xsm:hidden md:block'>
           <picture className='flex justify-center'>
             <img className="py-4"src="./img/map001.jpeg" alt="France's map"/>
             <div className=''>

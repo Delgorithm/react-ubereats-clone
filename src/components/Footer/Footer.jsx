@@ -8,14 +8,14 @@ import { FaInstagram } from 'react-icons/fa6'
 const Footer = () => {
   return (
     <div>
-        <div className='m-10 flex justify-between'>
+        <div className='m-10 flex xsm:flex-col md:flex-row justify-between'>
             <div className='flex flex-col justify-between'>
                 <p className='text-3xl'>Uber <span className='font-bold'>Eats</span></p>
-                <picture>
+                <picture className='xsm:hidden md:block'>
                     <img src="./img/applestore.svg" alt="" />
                 </picture>
             </div>
-            <div className='flex gap-6'>
+            <div className='flex gap-6 xsm:my-4 md:my-0'>
                 <div className='flex flex-col gap-4'>
                     {getLeftFooter().map((step, index) => (
                         <div key={index}>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
         <div>
             <div className='m-10 flex gap-10'>
-                <div className='flex'>
+                <div className='flex xsm:flex-col xsm:justify-around'>
                     <a href="#">
                         <FaFacebook className='w-10 h-6'/>
                     </a>
@@ -59,13 +59,15 @@ const Footer = () => {
                         <FaInstagram className='w-10 h-6'/>
                     </a>
                 </div>
-                {getBottomFooter().map((step, index) => (
-                    <div key={index}>
-                        <a href=''>{step.content}</a>
-                    </div>
-                ))}
+                <div className='xsm:flex xsm:flex-col xsm:gap-4 md:flex-row md:gap-10 md:justify-between'>
+                    {getBottomFooter().map((step, index) => (
+                        <div key={index}>
+                            <a href=''>{step.content}</a>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className='m-12 mx-20 flex gap-10'>
+            <div className='flex gap-10 justify-between m-10 '>
                     <p>Ce site est protégé par reCAPTCHA. Par ailleurs, la <a href="#">Politique de confidentialité</a>
                     et les <a href="#">Conditions d'utilisation</a> de Google s'appliquent.</p>
                     <p>© 2023 Uber Technologies Inc.</p>
