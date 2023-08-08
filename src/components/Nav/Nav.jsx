@@ -1,6 +1,6 @@
 import React from 'react'
 import MenuHamburger from '../MenuHamburger/MenuHamburger'
-import AuthentificationHeader from '../Authentification/AuthentificationHeader'
+import AuthentificationHeader from '../BtnAuthentification/BtnAuthentificationHeader'
 import Searching from '../Searching/Searching'
 
 const Nav = () => {

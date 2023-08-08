@@ -7,7 +7,7 @@ const Blog = () => {
             {getBlog().map((step, index) => (
                 <div key={index}>
                     <a className='flex flex-col w-full' href='#'>
-                        <img className="cursor-pointer" src={step.img} alt=""  />
+                        <img className="cursor-pointer w-full h-full" src={step.img} alt=""  />
                         <p className='flex flex-col text-3xl font-medium' href="# ">
                             {step.title}
                         </p>

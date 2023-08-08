@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Authentification from '../Authentification/Authentification';
+import Authentification from '../BtnAuthentification/BtnAuthentification';
 
 const MenuHamburger = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -6,7 +6,7 @@ import Nav from '../../components/Nav/Nav'
 const Hero = () => {
   return (
     <section 
-      className='w-full h-full bg-cover bg-center' 
+      className='bg-cover bg-no-repeat bg-center' 
       style={{ backgroundImage: `url('./img/bg003.jpg')`}}
     >
       <Nav />
