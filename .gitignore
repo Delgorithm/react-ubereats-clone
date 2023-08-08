@@ -1,0 +1,4 @@
+# .gitignore
+
+# Ignore the firebase config title
+src/firebase-config.jsx
