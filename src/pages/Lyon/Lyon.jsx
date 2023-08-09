@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Paris = () => {
+const Lyon = () => {
   return (
     <div>
-        <h1>Paris</h1>
+        <h1>Lyon</h1>
         <h1>UberEats</h1>
         <ul className='flex gap-4'>
           <li>
@@ -26,4 +27,4 @@ const Paris = () => {
   )
 }
 
-export default Paris
+export default Lyon

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Paris = () => {
+const Toulouse = () => {
   return (
     <div>
-        <h1>Paris</h1>
+        <h1>Toulouse</h1>
         <h1>UberEats</h1>
         <ul className='flex gap-4'>
           <li>
@@ -26,4 +26,4 @@ const Paris = () => {
   )
 }
 
-export default Paris
+export default Toulouse

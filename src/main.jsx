@@ -8,6 +8,8 @@ import Home from './pages/Home/Home.jsx'
 import Bordeaux from './pages/Bordeaux/Bordeaux.jsx'
 import Paris from './pages/Paris/Paris.jsx'
 import Auth from './pages/Auth/Auth.jsx';
+import Lyon from './pages/Lyon/Lyon.jsx';
+import Toulouse from './pages/Toulouse/Toulouse.jsx';
 
 
 
@@ -29,12 +31,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/Lyon",
-    element: <Paris />,
+    element: <Lyon />,
     errorElement: <ErrorPage />
   },
   {
     path: "/Toulouse",
-    element: <Paris />,
+    element: <Toulouse />,
     errorElement: <ErrorPage />
   },
   {

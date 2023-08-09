@@ -8,13 +8,21 @@ const Bordeaux = () => {
         <Menu />
         <div>
         <h1>UberEats</h1>
-        <ul>
-          <li className='flex gap-4'>
-            <a href="./Bordeaux">Bordeaux</a>
-            <a href="./Paris">Paris</a>
-            <a href="./Lyon">Lyon</a>
-            <a href="./Toulouse">Toulouse</a>
-            <a href="/">Accueil</a>
+        <ul className='flex gap-4'>
+          <li>
+            <Link to="/Paris">Paris</Link>
+          </li>
+          <li>
+            <Link to="/Lyon">Lyon</Link>
+          </li>
+          <li>
+            <Link to="/Bordeaux">Bordeaux</Link>
+          </li>
+          <li>
+            <Link to="/Toulouse">Toulouse</Link>
+          </li>
+          <li>
+            <Link to="/">Accueil</Link>
           </li>
         </ul>
     </div>

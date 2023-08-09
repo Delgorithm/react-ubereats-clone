@@ -1,5 +1,5 @@
 import React from 'react'
-import { createUserWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth'
 import { useState } from 'react'
 import { auth } from '../../firebase-config';
 import { current } from '@reduxjs/toolkit';
