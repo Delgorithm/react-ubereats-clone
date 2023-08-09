@@ -1,5 +1,8 @@
 import React from 'react'
 import Menu from '../../components/MenuHamburger/MenuHamburger'
+import { Link } from 'react-router-dom'
+import FooterMobile from '../../components/Footer/FooterMobile'
+import SearchBarMobile from '../../components/Searching/SearchBarMobile'
 
 const Bordeaux = () => {
   return (
@@ -25,7 +28,9 @@ const Bordeaux = () => {
             <Link to="/">Accueil</Link>
           </li>
         </ul>
-    </div>
+        <SearchBarMobile />
+        <FooterMobile />
+        </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
-import React from 'react'
-import { FaLocationDot } from 'react-icons/fa6'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { FaLocationDot } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 
 const Map = () => {
