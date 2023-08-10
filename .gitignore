@@ -1,4 +1,4 @@
 # .gitignore
 
-# Ignore the firebase config title
-src/firebase-config.jsx
+# Exclude .env file inside the src folder
+src/.env

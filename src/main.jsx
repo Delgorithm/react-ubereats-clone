@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import dotenv from 'dotenv';
+
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider, BrowserRouter } from "react-router-dom";
@@ -11,6 +13,8 @@ import Auth from './pages/Auth/Auth.jsx';
 import Lyon from './pages/Lyon/Lyon.jsx';
 import Toulouse from './pages/Toulouse/Toulouse.jsx';
 
+
+dotenv.config();
 
 
 const router = createBrowserRouter([
