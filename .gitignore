@@ -1,4 +1,4 @@
 # .gitignore
 
-# Exclude .env file inside the src folder
-src/.env
+# Ignore the file containing API keys
+.env

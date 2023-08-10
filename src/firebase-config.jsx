@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    projectId: "authubereat",
-    storageBucket: "authubereat.appspot.com",
-    messagingSenderId: "610080378885",
-    appId: "1:610080378885:web:cbc1c635d0466db57d8c6c",
-    measurementId: "G-L62YZTD9C6"
+    apiKey: import.meta.env.VITE_REACT_APP_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_REACT_APP_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_REACT_APP_FIREBASE_MEASUREMENT_ID
   };
 
 const app = initializeApp(firebaseConfig);
