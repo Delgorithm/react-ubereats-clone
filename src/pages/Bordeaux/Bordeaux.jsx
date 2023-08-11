@@ -3,6 +3,8 @@ import Menu from '../../components/MenuHamburger/MenuHamburger'
 import { Link } from 'react-router-dom'
 import FooterMobile from '../../components/Footer/FooterMobile'
 import SearchBarMobile from '../../components/Searching/SearchBarMobile'
+import SelectionTypeFood from '../../components/SelectionTypeFood/SelectionTypeFood'
+import SelectionTypeStore from '../../components/SelectionTypeStore/SelectionTypeStore'
 
 const Bordeaux = () => {
   return (
@@ -29,6 +31,8 @@ const Bordeaux = () => {
           </li>
         </ul>
         <SearchBarMobile />
+        <SelectionTypeFood />
+        <SelectionTypeStore />
         <FooterMobile />
         </div>
     </div>

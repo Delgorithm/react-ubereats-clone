@@ -15,7 +15,7 @@ const SearchBarMobile = () => {
                 <FaSistrix className='h-6 w-6'/>
             </button>
             <input 
-                className='flex border p-3 w-[350px] m-2 pl-16'
+                className='flex border p-3 w-[350px] m-2 pl-16 rounded-3xl'
                 placeholder="Rechercher dans l'aide Uber Eats"
                 type="text" 
             />
