@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Authentification from '../BtnAuthentification/BtnAuthentification';
 
 const MenuHamburger = () => {
@@ -45,6 +46,23 @@ const MenuHamburger = () => {
                   <a href="#">Créez un compte professionnel</a>
                   <a href="#">Ajoutez voutre restaurant</a>
                   <a href="#">Devenez un coursier-partenaire</a>
+                </li>
+              </ul>
+              <ul className='flex flex-col  items-center gap-4'>
+                <li>
+                  <Link to="/">Accueil</Link>
+                </li>
+                <li>
+                  <Link to="/Paris">Paris</Link>
+                </li>
+                <li>
+                  <Link to="/Lyon">Lyon</Link>
+                </li>
+                <li>
+                  <Link to="/Bordeaux">Bordeaux</Link>
+                </li>
+                <li>
+                  <Link to="/Toulouse">Toulouse</Link>
                 </li>
               </ul>
             </div>
