@@ -7,7 +7,7 @@ import { FaUser } from 'react-icons/fa6'
 
 const FooterMobile = () => {
   return (
-    <div className='flex justify-around items-center fixed w-screen bg-green-400 bottom-0 h-20'>
+    <div className='flex justify-around items-center fixed w-screen bg-white bottom-0 h-20'>
         <div className='flex flex-col items-center'>
             <FaHouseChimney className='w-16 h-6' />
             <p>Accueil</p>

@@ -33,7 +33,7 @@ function SelectionTypeStore(props) {
         {marketsDisplay.map((item) => (
           <button key={item.id} className='m-2'>
             <img src={item.img} className='rounded-3xl w-[400px] h-[200px]' />
-            <div className='flex items-center justify-between bg-red-200'>
+            <div className='flex items-center justify-between '>
               <div className='flex flex-col '>
                 <p className='flex justify-start'>{item.name}</p>
                 <div className='flex items-center gap-1'>
