@@ -17,10 +17,13 @@ function SelectionTypeStore(props) {
   ]
 
   return (
-    <div>
+    <div className='pb-20'>
       <div className='flex items-center justify-around gap-5 p-5 w-screen'>
         {markets.map((item) => (
-          <button key={item.id} className='w-20'>
+          <button 
+            key={item.id} 
+            className='w-20'
+          >
             <img 
               src={item.img} 
               alt={item.name} 
@@ -31,7 +34,10 @@ function SelectionTypeStore(props) {
       </div>
       <div className='m-2 flex flex-col justify-center items-center'>
         {marketsDisplay.map((item) => (
-          <button key={item.id} className='m-2'>
+          <button 
+            key={item.id} 
+            className='m-2'
+          >
             <img src={item.img} className='rounded-3xl w-[400px] h-[200px]' />
             <div className='flex items-center justify-between '>
               <div className='flex flex-col '>
