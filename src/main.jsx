@@ -14,6 +14,9 @@ import AuthRegister from './pages/Auth/AuthRegister.jsx';
 
 import Lyon from './pages/Lyon/Lyon.jsx';
 import Toulouse from './pages/Toulouse/Toulouse.jsx';
+import Cart from './pages/Cart/Cart.jsx';
+import Browse from './pages/Browse/Browse.jsx';
+import Profil from './pages/Profil/Profil.jsx';
 
 
 const router = createBrowserRouter([
@@ -51,8 +54,22 @@ const router = createBrowserRouter([
     path: "/AuthRegister",
     element: <AuthRegister />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: "/Cart",
+    element: <Cart />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Browse",
+    element: <Browse />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Profil",
+    element: <Profil />,
+    errorElement: <ErrorPage />
   }
-
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
