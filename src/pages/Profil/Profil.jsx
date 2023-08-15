@@ -15,7 +15,7 @@ import FooterMobile from '../../components/Footer/FooterMobile'
 function Profil(){
   const info = [
     { id: 1, name: "Nom utilisateur"},
-    { id: 2, imgP: "./img/ppa.jpg"}
+    { id: 2, img: "./img/ppa.jpg"}
   ]
 
   const mainSelection = [
@@ -34,27 +34,27 @@ function Profil(){
   ]
 
   return(
-    <>
+    <div className='pb-24'>
       <div>
-        <div>
+        <div className='flex justify-around'>
           {info.map((item) => (
-            <div className='flex justify-between items-center'>
-              <p>{item.name}</p>
-              <img src={item.imgP} className='w-20 h-full'/>
+            <div key={item.id} className='flex items-center m-2'>
+              <p className='text-3xl'>{item.name}</p>
+              <img src={item.img} alt="" className='w-20 rounded-full' />
             </div>
           ))}
         </div>
         <div className='flex justify-around'>
           {mainSelection.map((item) => (
-            <div className='flex flex-col items-center justify-around w-screen p-5 m-4 bg-blue-200'>
+            <div key={item.id}  className='flex flex-col items-center justify-around w-screen p-5 m-2 my-10 bg-gray-100 rounded-md'>
               <p>{item.name}</p>
               {item.icon}
             </div>
           ))}
         </div>
-        <div className='p-2'>
+        <div className='p-2 flex flex-col gap-6'>
           {mainSettings.map((item => (
-            <div className='flex items-center gap-2 p-4 bg-red-50'>
+            <div key={item.id}  className='flex items-center gap-4 p-4'>
               {item.icon}
               <p>{item.name}</p>
             </div>
@@ -62,7 +62,7 @@ function Profil(){
         </div>
       </div>
       <FooterMobile />
-    </>
+    </div>
   )
 }
 
