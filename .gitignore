@@ -2,3 +2,5 @@
 
 # Ignore the file containing API keys
 .env
+
+.vscode

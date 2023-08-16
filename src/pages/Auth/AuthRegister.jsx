@@ -2,32 +2,33 @@ import React, { useEffect } from 'react'
 import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import { useState } from 'react'
 import { auth } from '../../firebase-config';
-import { current } from '@reduxjs/toolkit';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const AuthRegister = () => {
-
+    const navigate = useNavigate();
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
-
     const [user, setUser] = useState({});
 
     onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser)
     })
 
-    const register = async () => {
-        try {
-            const user = await createUserWithEmailAndPassword(
-                auth, 
-                registerEmail, 
-                registerPassword
-                );
-            console.log("Connected with : " + user);
-        } catch (error) {
-            console.log("The error is : " + error.message);
-        }
+    const onSubmit = async (e) => {
+        e.preventDefault()
+
+        await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            navigate('/')
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage);
+        })
     }
 
 
@@ -46,19 +47,19 @@ const AuthRegister = () => {
                 <input
                     className='p-2 m-2 border border-solid border-gray-400 rounded-lg' 
                     placeholder='Email...'
-                    onChange={(event) => {
-                        setRegisterEmail(event.target.value);
+                    onChange={(e) => {
+                        setRegisterEmail(e.target.value);
                     }}
                 />
                 <input 
                     className='p-2 m-2 border border-solid border-gray-400 rounded-lg'
                     placeholder='Mot de passe...'
-                    onChange={(event) => {
-                        setRegisterPassword(event.target.value);
+                    onChange={(e) => {
+                        setRegisterPassword(e.target.value);
                     }}
                 />
                 <button 
-                    onClick={register} 
+                    onClick={onSubmit} 
                     className='bg-green-400 px-10 py-2 m-2 rounded-lg active:opacity-70'>Créer le compte
                 </button>
                 <p className='my-2'>Vous avez déjà un compte ? <Link to="/AuthLogin">Connectez-vous</Link></p>
