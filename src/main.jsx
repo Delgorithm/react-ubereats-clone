@@ -17,6 +17,7 @@ import Toulouse from './pages/Toulouse/Toulouse.jsx';
 import Cart from './pages/Cart/Cart.jsx';
 import Browse from './pages/Browse/Browse.jsx';
 import Profil from './pages/Profil/Profil.jsx';
+import Orders from './pages/Orders/Orders.jsx';
 
 
 const router = createBrowserRouter([
@@ -68,6 +69,11 @@ const router = createBrowserRouter([
   {
     path: "/Profil",
     element: <Profil />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Orders",
+    element: <Orders />,
     errorElement: <ErrorPage />
   }
 ]);

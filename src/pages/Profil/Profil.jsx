@@ -46,7 +46,7 @@ function Profil(){
         </div>
         <div className='flex justify-around'>
           {mainSelection.map((item) => (
-            <div key={item.id}  className='flex flex-col items-center justify-around w-screen p-5 m-2 my-10 bg-gray-100 rounded-md'>
+            <div key={item.id}  className='flex flex-col items-center justify-around w-screen p-5 m-2 my-10 active:opacity-70 bg-gray-100 rounded-md'>
               <p>{item.name}</p>
               {item.icon}
             </div>
