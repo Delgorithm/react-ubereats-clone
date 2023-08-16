@@ -37,8 +37,8 @@ const MenuHamburger = () => {
         </button>
       </div>
       {isOpen && (
-        <nav className='absolute left-0 top-0 z-50 '>
-          <div className="w-80 h-screen flex flex-col justify-between bg-gray-100">
+        <nav className='absolute left-0 top-0 z-50'>
+          <div className="w-80 h-screen flex flex-col justify-between bg-gray-100 fixed">
             <div className="flex flex-col my-4">
               <Authentification />
               <ul>

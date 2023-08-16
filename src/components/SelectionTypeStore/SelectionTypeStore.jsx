@@ -27,7 +27,7 @@ function SelectionTypeStore(props) {
             <img 
               src={item.img} 
               alt={item.name} 
-              className='  rounded-full border'
+              className='rounded-full border'
             />
           </button>
         ))}
