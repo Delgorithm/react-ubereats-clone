@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import { useState } from 'react'
 import { auth } from '../../firebase-config';
 import { current } from '@reduxjs/toolkit';
 import { Link } from 'react-router-dom';
-
 
 
 const AuthRegister = () => {
@@ -25,9 +24,9 @@ const AuthRegister = () => {
                 registerEmail, 
                 registerPassword
                 );
-            console.log(user);
+            console.log("Connected with : " + user);
         } catch (error) {
-            console.log(error.message);
+            console.log("The error is : " + error.message);
         }
     }
 

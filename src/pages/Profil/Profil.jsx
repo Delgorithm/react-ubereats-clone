@@ -54,7 +54,7 @@ function Profil(){
         </div>
         <div className='p-2 flex flex-col gap-6'>
           {mainSettings.map((item => (
-            <div key={item.id}  className='flex items-center gap-4 p-4'>
+            <div key={item.id}  className='flex items-center gap-4 p-4 active:bg-gray-100'>
               {item.icon}
               <p>{item.name}</p>
             </div>
