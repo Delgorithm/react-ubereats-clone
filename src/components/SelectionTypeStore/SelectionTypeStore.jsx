@@ -17,46 +17,92 @@ function SelectionTypeStore(props) {
   ];
 
   const marketsDisplay = [
-    { id: 1, img:'./img/marketdisplay001.png', name: "McDonald's", delivery:'Frais de livraison', cost:'2.49€', time:'10-25 min', star: '4.0', icon:<FaCodeMerge /> },
-    { id: 2, img:'./img/marketdisplay002.png', name: "KFC", delivery:'Frais de livraison', cost:'2.99€', time:'15-25 min', star: '3.2', icon:<FaCodeMerge /> },
-    { id: 3, img:'./img/marketdisplay003.png', name: "Poké", delivery:'Frais de livraison', cost:'3.99€', time:'15-30 min', star: '3.7', icon:<FaCodeMerge /> },
+    { id: 1, img:'./img/marketdisplay001.png', name: "McDonald's", delivery:'Frais de livraison', cost:2.49 + '€', time:'10-25 min', star: '4.0', icon:<FaCodeMerge /> },
+    { id: 2, img:'./img/marketdisplay002.png', name: "KFC", delivery:'Frais de livraison', cost: 2.99 + '€', time:'15-25 min', star: '3.2', icon:<FaCodeMerge /> },
+    { id: 3, img:'./img/marketdisplay003.png', name: "Poké", delivery:'Frais de livraison', cost: 3.99 + '€', time:'15-30 min', star: '3.7', icon:<FaCodeMerge /> },
   ]
 
   const contentByItemId = {
-    1: {
+    1:{
       img:'./img/marketdisplay001.png',
       name: "McDonald's (Bordeaux Victoire)",
       iconStar: <FaStar />,
       star: "4.1 (200+ notes)",
       time: "10-25 min",
       delivery: "Frais de livraison",
-      cost: "2.49€",
+      cost: 2.49 + "€",
       information: "Appuyez pour consulter les horaires, les informations, etc.",
       iconRight: <FaAngleRight />,
     },
-    2: {
+    2:{
       img:'./img/marketdisplay002.png',
       name: "KFC (St-Catherine)",
       iconStar: <FaStar />,
       star: "3.2 (200+ notes)",
       time: "15-25 min",
       delivery: "Frais de livraison",
-      cost: "2.99€",
+      cost: 2.99 +"€",
       information: "Appuyez pour consulter les horaires, les informations, etc.",
       iconRight: <FaAngleRight />,
     },
-    3: {
+    3:{
       img:'./img/marketdisplay003.png',
       name: "Poké (St-Catherine)",
       iconStar: <FaStar />,
       star: "3.7 (200+ notes)",
       time: "15-30 min",
       delivery: "Frais de livraison",
-      cost: "3.99€",
+      cost: 3.99 + "€",
       information: "Appuyez pour consulter les horaires, les informations, etc.",
       iconRight: <FaAngleRight />,
     }
   }
+
+  const formulesByItemId = [
+    {
+      id: 1,
+      img: './img/mcdoproduct001.jpg',
+      name: "P'TIT BOEUF DELUXE",
+      price: 10.00 + '€',
+      information: "Pain spécial, steak haché, fromage fondu, salade, oignons, sauce."
+    },
+    {
+      id: 2,
+      img: './img/mcdoproduct002.jpg',
+      name: "BIG TASTY",
+      price: 13.90 + '€',
+      information: "Pain spécial, steack haché, salade, oignon, emmental fondu, tomate, sauce.",
+    },
+    {
+      id: 3,
+      img: './img/mcdoproduct003.jpg',
+      name: "BIG MAC",
+      price: 13.35 + '€',
+      information: "Pain spécial, steacks hachés, salade, oignon, cornichon, fromage fondu, sauce.",
+    },
+    {
+      id: 4,
+      img: './img/mcdoproduct004.jpg',
+      name: "EGG CHESSE",
+      price: 14.95 + '€',
+      information: "Pain McMuffin, 1 oeuf fraîchement craqué, 1 tranche de cheddar",
+    },
+    {
+      id: 5,
+      img: './img/mcdoproduct005.jpg',
+      name: "MC CHEVRE",
+      price: 12.90 + '€',
+      information: "Galette de blé, spécialité pannée à base de fromage de chèvre, batavia, rondelles de tomates, oignons préparés et frits, sauce.",
+    },
+    {
+      id: 6,
+      img: './img/mcdoproduct006.jpg',
+      name: "MC CRISPY",
+      price: 14.90 + '€',
+      information: "Pain spécial, filet de poulet mariné, pané et frit, salade, sauce.",
+    },  
+  ]
+  
 
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -120,17 +166,33 @@ function SelectionTypeStore(props) {
                 <p className=''>{contentByItemId[selectedItem.id].information}</p>
                 <p className=''>{contentByItemId[selectedItem.id].iconRight}</p>
               </div>
-              <div className='fixed bg-white w-screen'>
-                <button className='fixed top-[8%] left-[5%] p-2 bg-gray-200 rounded-full' onClick={() => setSelectedItem(null)}> <FaX /> </button>
-                <button className='fixed top-[8%] right-[18%] p-2 bg-gray-200 rounded-full'> <FaSistrix/> </button>
-                <button className='fixed top-[8%] right-[6%] p-2 bg-gray-200 rounded-full'> <FaEllipsis/> </button>
-
+              <div className='absolute top-10 left-6 w-[88%] '>
+                <div className='flex justify-between items-center'>
+                  <button className='p-2 bg-gray-200 rounded-full' onClick={() => setSelectedItem(null)}> <FaX /> </button>
+                  <div className='flex gap-6'>
+                    <button className='p-2 bg-gray-200 rounded-full'> <FaSistrix/> </button>
+                    <button className='p-2 bg-gray-200 rounded-full'> <FaEllipsis/> </button>
+                  </div>
+                </div>
+              </div>
+              <p className='text-2xl my-4'>Les plus populaires</p>
+              <div>
+                {formulesByItemId.map((step, index) => (
+                  <div key={step.id} className='flex items-center'>
+                    <div className='m-4'>
+                      <p>{step.name}</p>
+                      <p className='font-light'>{step.price}</p>
+                      <p className='font-thin'>{step.information}</p>
+                    </div>
+                    <picture>
+                      <img src={step.img} alt="" width={300}/>
+                    </picture>
+                  </div>
+                ))}
               </div>
             </div>
-
           </div>
         )}
-
       </div>
     </div>
   )

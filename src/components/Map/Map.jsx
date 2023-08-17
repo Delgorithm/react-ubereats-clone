@@ -40,16 +40,16 @@ const Map = () => {
         <div>
           <ul className='flex justify-between py-4'>
             <li>
-              <Link to="/Paris">Paris</Link>
+              <Link to="/Bordeaux">Paris</Link>
             </li>
             <li>
-              <Link to="/Lyon">Lyon</Link>
+              <Link to="/Bordeaux">Lyon</Link>
             </li>
             <li>
               <Link to="/Bordeaux">Bordeaux</Link>
             </li>
             <li>
-              <Link to="/Toulouse">Toulouse</Link>
+              <Link to="/Bordeaux">Toulouse</Link>
             </li>
           </ul>
         </div>
