@@ -58,7 +58,7 @@ function SelectionTypeStore(props) {
     }
   }
 
-  const formulesByItemId = [
+  const mcdoItems = [
     {
       id: 1,
       img: './img/mcdoproduct001.jpg',
@@ -102,6 +102,47 @@ function SelectionTypeStore(props) {
       information: "Pain spécial, filet de poulet mariné, pané et frit, salade, sauce.",
     },  
   ]
+
+  const kfcItems = [
+    {
+      id: 1,
+      img: './img/Menu_10.jpg',
+      name: 'Menu 10 Tenders',
+      price:  10 + '€',
+      information: 'Un menu Bucket généreux pour vous régaler façon KFC ! 10 Tenders®, des morceaux de poulet marinés et panés… tendre dedans et croustillants dehors ! + 3 sauces.',
+    },
+    {
+      id: 2,
+      img: './img/Menu_16.jpg',
+      name: 'Menu 16 Tenders',
+      price:  16 + '€',
+      information: 'Un menu Bucket généreux pour vous régaler façon KFC ! 16 Tenders®, des morceaux de poulet marinés et panés… tendre dedans et croustillants dehors ! + 3 sauces.',
+    },
+    {
+      id: 3,
+      img: './img/Menu_32.jpg',
+      name: 'Menu 32 Tenders',
+      price:  32 + '€',
+      information: 'Un menu Bucket généreux pour vous régaler façon KFC ! 32 Tenders®, des morceaux de poulet marinés et panés… tendre dedans et croustillants dehors ! + 3 sauces.',
+    },
+    {
+      id: 4,
+      img: './img/Menu_50.jpg',
+      name: 'Menu 50 Tenders',
+      price:  99.90 + '€',
+      information: 'Un menu Bucket généreux pour vous régaler façon KFC ! 50 Tenders®, des morceaux de poulet marinés et panés… tendre dedans et croustillants dehors ! + 3 sauces.',
+    },
+  ]
+
+  const pokeItems = [
+    {
+      id: 1,
+      img: './img/poke.jpg',
+      name: 'Beef Loc Lac',
+      price: 299.99 + '€',
+      information: 'Émincé de boeuf caramélisé et sauté au wok, riz blanc sauté à la tomate, salade, tomates, concombres et oignons rouges et ciboulette thaï.'
+    }
+  ]
   
 
   const [selectedItem, setSelectedItem] = useState(null);
@@ -133,15 +174,16 @@ function SelectionTypeStore(props) {
             <div className='flex items-center justify-between '>
               <div className='flex flex-col '>
                 <p className='flex justify-start'>{item.name}</p>
-                <div className='flex items-center gap-1'>
+                <div className='flex items-center gap-2'>
                   {item.icon}
-                  <p>{item.delivery}</p> {/* <p>{item.delivery} + localisation with google map API */}
+                  <p className='font-light text-sm'>{item.delivery}</p>{/* <p>{item.delivery} + localisation with google map API */}
+                  <p className='font-light text-sm'>{item.cost}</p>
+                  <p className='font-light text-sm'>{item.time}</p> 
                 </div>
               </div>
               <div>
                 <p className='p-1 rounded-full bg-gray-200'>{item.star}</p>
               </div>
-
             </div>
           </button>
         ))}
@@ -177,18 +219,49 @@ function SelectionTypeStore(props) {
               </div>
               <p className='text-2xl my-4'>Les plus populaires</p>
               <div>
-                {formulesByItemId.map((step, index) => (
-                  <div key={step.id} className='flex items-center'>
+                {selectedItem.id === 1 && 
+                  mcdoItems.map((step, index) => (
+                    <div key={step.id} className='flex items-center'>
+                      <div className='m-4'>
+                        <p key={step.id} >{step.name}</p>
+                        <p key={step.id} className='font-light'>{step.price}</p>
+                        <p key={step.id} className='font-thin'>{step.information}</p>
+                      </div>
+                      <picture>
+                        <img key={step.id} src={step.img} alt="" width={300}/>
+                      </picture>
+                    </div>
+                  ))}
+              </div>
+              <div>
+                {selectedItem.id === 2 && 
+                  kfcItems.map((step, index) => (
+                    <div key={step.id} className='flex items-center'>
+                      <div className='m-4'>
+                        <p key={step.id} >{step.name}</p>
+                        <p key={step.id} className='font-light'>{step.price}</p>
+                        <p key={step.id} className='font-thin'>{step.information}</p>
+                      </div>
+                      <picture>
+                        <img key={step.id} src={step.img} alt="" width={1000}/>
+                      </picture>
+                    </div>
+                  ))}
+              </div>
+              <div>
+                {selectedItem.id === 3 && 
+                  pokeItems.map((step, index) => (
+                    <div key={step.id} className='flex items-center'>
                     <div className='m-4'>
-                      <p>{step.name}</p>
-                      <p className='font-light'>{step.price}</p>
-                      <p className='font-thin'>{step.information}</p>
+                      <p key={step.id} >{step.name}</p>
+                      <p key={step.id} className='font-light'>{step.price}</p>
+                      <p key={step.id} className='font-thin'>{step.information}</p>
                     </div>
                     <picture>
-                      <img src={step.img} alt="" width={300}/>
+                      <img key={step.id} src={step.img} alt="" width={1000}/>
                     </picture>
                   </div>
-                ))}
+                  ))}
               </div>
             </div>
           </div>
