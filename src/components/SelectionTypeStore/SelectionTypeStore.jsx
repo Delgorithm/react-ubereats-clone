@@ -149,6 +149,15 @@ function SelectionTypeStore(props) {
         {selectedItem && (
           <div className='fixed top-2 left-0 w-screen h-screen flex justify-center items-center'>
             <div className='bg-white p-4 rounded-lg overflow-y-auto h-[700px] w-screen pb-32'>
+              <div className='fixed p-4 w-screen'>
+                <div className='flex justify-between items-center'>
+                  <button className='p-2 bg-gray-200 rounded-full' onClick={() => setSelectedItem(null)}> <FaX /> </button>
+                  <div className='flex gap-6'>
+                    <button className='p-2 bg-gray-200 rounded-full'> <FaSistrix/> </button>
+                    <button className='p-2 mx-6 bg-gray-200 rounded-full'> <FaEllipsis/> </button>
+                  </div>
+                </div>
+              </div>
               <picture>
                 <img className="" src={contentByItemId[selectedItem.id].img} alt="" width={screen} height={screen}/>
               </picture>
@@ -165,15 +174,6 @@ function SelectionTypeStore(props) {
               <div className='flex items-center justify-between font-light'>
                 <p className=''>{contentByItemId[selectedItem.id].information}</p>
                 <p className=''>{contentByItemId[selectedItem.id].iconRight}</p>
-              </div>
-              <div className='absolute top-10 left-6 w-[88%] '>
-                <div className='flex justify-between items-center'>
-                  <button className='p-2 bg-gray-200 rounded-full' onClick={() => setSelectedItem(null)}> <FaX /> </button>
-                  <div className='flex gap-6'>
-                    <button className='p-2 bg-gray-200 rounded-full'> <FaSistrix/> </button>
-                    <button className='p-2 bg-gray-200 rounded-full'> <FaEllipsis/> </button>
-                  </div>
-                </div>
               </div>
               <p className='text-2xl my-4'>Les plus populaires</p>
               <div>
