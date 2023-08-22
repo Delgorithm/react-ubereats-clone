@@ -9,7 +9,8 @@ const AuthRegister = () => {
     const navigate = useNavigate();
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
-    const [user, setUser] = useState({});
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
 
     onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser)
@@ -22,7 +23,7 @@ const AuthRegister = () => {
         .then((userCredential) => {
             const user = userCredential.user;
             console.log(user);
-            navigate('/')
+            navigate('/');
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -49,6 +50,20 @@ const AuthRegister = () => {
                     placeholder='Email...'
                     onChange={(e) => {
                         setRegisterEmail(e.target.value);
+                    }}
+                />
+                <input
+                    className='p-2 m-2 border border-solid border-gray-400 rounded-lg' 
+                    placeholder='Prénom...'
+                    onChange={(e) => {
+                        setFirstName(e.target.value);
+                    }}
+                />
+                <input
+                    className='p-2 m-2 border border-solid border-gray-400 rounded-lg' 
+                    placeholder='Nom...'
+                    onChange={(e) => {
+                        setLastName(e.target.value);
                     }}
                 />
                 <input 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const AuthentificationHeader = (props) => {
+const BtnAuthentificationHeader = (props) => {
   return (
       <div className='flex sticky'>
         <Link to="/AuthLogin">
@@ -14,5 +14,4 @@ const AuthentificationHeader = (props) => {
   )
 }
 
-export default AuthentificationHeader
-
+export default BtnAuthentificationHeader

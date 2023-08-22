@@ -21,9 +21,14 @@ const FooterMobile = () => {
             </div>
         </Link>
         <Link to="/Cart">
-            <div className='flex flex-col items-center'>
-                <FaCartShopping className='w-16 h-6'  />
-                <p>Paniers</p>
+            <div className='flex justify-end'>
+                <div className='flex flex-col items-center'>
+                    <FaCartShopping className='w-16 h-6'  />
+                    <p>Paniers</p>
+                </div>
+                <span className='flex items-center absolute top-0 bg-red-200 w-5 h-5 rounded-full'>
+                    <p>+1</p>
+                </span>
             </div>
         </Link>
         <Link to="/Profil">

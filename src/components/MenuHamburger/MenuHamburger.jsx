@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Authentification from '../BtnAuthentification/BtnAuthentification';
+import BtnAuthentification from '../BtnAuthentification/BtnAuthentification';
 
 const MenuHamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +40,7 @@ const MenuHamburger = () => {
         <nav className='absolute left-0 top-0 z-50'>
           <div className="w-80 h-screen flex flex-col justify-between bg-gray-100 fixed">
             <div className="flex flex-col my-4">
-              <Authentification />
+              <BtnAuthentification/>
               <ul>
                 <li className='flex flex-col gap-2 m-6'>
                   <a href="#">Créez un compte professionnel</a>
