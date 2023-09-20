@@ -6,6 +6,10 @@ import { FaUser } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
 const FooterMobile = () => {
+
+    // const [cart, setCart] = useState('');
+
+
   return (
     <div className='flex justify-around items-center fixed w-screen bg-white bottom-0 h-20'>
         <Link to="/Bordeaux">
@@ -26,7 +30,7 @@ const FooterMobile = () => {
                     <FaCartShopping className='w-16 h-6'  />
                     <p>Paniers</p>
                 </div>
-                <span className='flex items-center absolute top-0 bg-red-200 w-5 h-5 rounded-full'>
+                <span className='flex items-center absolute top-0 rounded-full'>
                     <p>+1</p>
                 </span>
             </div>

@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState, useCallback } from 'react'
 import { FaCodeMerge } from 'react-icons/fa6'
 import { FaX } from 'react-icons/fa6'
 import { FaSistrix } from 'react-icons/fa6'
@@ -7,19 +6,67 @@ import { FaEllipsis } from 'react-icons/fa6'
 import { FaStar } from 'react-icons/fa6'
 import { FaAngleRight } from 'react-icons/fa6'
 
-function SelectionTypeStore(props) {
+function SelectionTypeStore() {
+
   const markets = [
-    { id: 1, img:'./img/carrefour-3.svg', name:'Carrefour'},
-    { id: 2, img:'./img/super-u-1.svg', name:'Super U'},
-    { id: 3, img:'./img/lidl-logo-1.svg', name:'Lidl'},
-    { id: 4, img:'./img/bio-1.svg', name:'Bio'},
-    { id: 5, img:'./img/picard.svg', name:'Picard'},
+    { 
+      id: 1, 
+      img:'./img/carrefour-3.svg', 
+      name:'Carrefour'
+    },
+    {
+      id: 2, 
+      img:'./img/super-u-1.svg', 
+      name:'Super U'
+    },
+    { 
+      id: 3, 
+      img:'./img/lidl-logo-1.svg', 
+      name:'Lidl'
+    },
+    { 
+      id: 4, 
+      img:'./img/bio-1.svg', 
+      name:'Bio'
+    },
+    { 
+      id: 5, 
+      img:'./img/picard.svg', 
+      name:'Picard'
+    },
   ];
 
   const marketsDisplay = [
-    { id: 1, img:'./img/marketdisplay001.png', name: "McDonald's", delivery:'Frais de livraison', cost:2.49 + '€', time:'10-25 min', star: '4.0', icon:<FaCodeMerge /> },
-    { id: 2, img:'./img/marketdisplay002.png', name: "KFC", delivery:'Frais de livraison', cost: 2.99 + '€', time:'15-25 min', star: '3.2', icon:<FaCodeMerge /> },
-    { id: 3, img:'./img/marketdisplay003.png', name: "Poké", delivery:'Frais de livraison', cost: 3.99 + '€', time:'15-30 min', star: '3.7', icon:<FaCodeMerge /> },
+    { 
+      id: 1, 
+      img:'./img/marketdisplay001.png', 
+      name: "McDonald's", 
+      delivery:'Frais de livraison', 
+      cost:2.49 + '€', 
+      time:'10-25 min', 
+      star: '4.0', 
+      icon:<FaCodeMerge /> 
+    },
+    { 
+      id: 2, 
+      img:'./img/marketdisplay002.png', 
+      name: "KFC", 
+      delivery:'Frais de livraison', 
+      cost: 2.99 + '€', 
+      time:'15-25 min', 
+      star: '3.2', 
+      icon:<FaCodeMerge /> 
+    },
+    { 
+      id: 3,
+       img:'./img/marketdisplay003.png', 
+       name: "Poké", 
+       delivery:'Frais de livraison', 
+       cost: 3.99 + '€', 
+       time:'15-30 min', 
+       star: '3.7', 
+       icon:<FaCodeMerge /> 
+    },
   ]
 
   const contentByItemId = {
@@ -56,7 +103,7 @@ function SelectionTypeStore(props) {
       information: "Appuyez pour consulter les horaires, les informations, etc.",
       iconRight: <FaAngleRight />,
     }
-  }
+  };
 
   const mcdoItems = [
     {
@@ -142,7 +189,8 @@ function SelectionTypeStore(props) {
       price: 299.99 + '€',
       information: 'Émincé de boeuf caramélisé et sauté au wok, riz blanc sauté à la tomate, salade, tomates, concombres et oignons rouges et ciboulette thaï.'
     }
-  ]
+  ];
+
   
 
   const [selectedItem, setSelectedItem] = useState(null);
@@ -218,10 +266,10 @@ function SelectionTypeStore(props) {
                 <p className=''>{contentByItemId[selectedItem.id].iconRight}</p>
               </div>
               <p className='text-2xl my-4'>Les plus populaires</p>
-              <div>
+              <button>
                 {selectedItem.id === 1 && 
                   mcdoItems.map((step, index) => (
-                    <div key={step.id} className='flex items-center'>
+                    <div key={step.id} className='flex text-left items-center'>
                       <div className='m-4'>
                         <p key={step.id} >{step.name}</p>
                         <p key={step.id} className='font-light'>{step.price}</p>
@@ -232,11 +280,11 @@ function SelectionTypeStore(props) {
                       </picture>
                     </div>
                   ))}
-              </div>
-              <div>
+              </button>
+              <button>
                 {selectedItem.id === 2 && 
                   kfcItems.map((step, index) => (
-                    <div key={step.id} className='flex items-center'>
+                    <div key={step.id} className='flex text-left items-center'>
                       <div className='m-4'>
                         <p key={step.id} >{step.name}</p>
                         <p key={step.id} className='font-light'>{step.price}</p>
@@ -247,11 +295,11 @@ function SelectionTypeStore(props) {
                       </picture>
                     </div>
                   ))}
-              </div>
-              <div>
+              </button>
+              <button>
                 {selectedItem.id === 3 && 
                   pokeItems.map((step, index) => (
-                    <div key={step.id} className='flex items-center'>
+                    <div key={step.id} className='flex text-left items-center'>
                     <div className='m-4'>
                       <p key={step.id} >{step.name}</p>
                       <p key={step.id} className='font-light'>{step.price}</p>
@@ -262,7 +310,7 @@ function SelectionTypeStore(props) {
                     </picture>
                   </div>
                   ))}
-              </div>
+              </button>
             </div>
           </div>
         )}

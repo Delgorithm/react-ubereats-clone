@@ -41,14 +41,7 @@ const MenuHamburger = () => {
           <div className="w-80 h-screen flex flex-col justify-between bg-gray-100 fixed">
             <div className="flex flex-col my-4">
               <BtnAuthentification/>
-              <ul>
-                <li className='flex flex-col gap-2 m-6'>
-                  <a href="#">Créez un compte professionnel</a>
-                  <a href="#">Ajoutez voutre restaurant</a>
-                  <a href="#">Devenez un coursier-partenaire</a>
-                </li>
-              </ul>
-              <ul className='flex flex-col  items-center gap-4'>
+              <ul className='flex flex-col  items-center gap-4 py-10'>
                 <li>
                   <Link to="/">Accueil</Link>
                 </li>
