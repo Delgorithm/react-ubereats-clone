@@ -2,12 +2,14 @@ import React from 'react';
 import FooterMobile from '../../components/Footer/FooterMobile';
 import { FaReceipt } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import SelectionTypeStore from '../../components/SelectionTypeStore/SelectionTypeStore';
 // import { mcdoItems, kfcItems, pokeItems } from '../SelectionTypeFood/Food'
 
 
 
-const Cart = () => {
-  const isEmpty = true;
+function Cart() {
+
+  const isEmpty = false;
 
   return (
     <>

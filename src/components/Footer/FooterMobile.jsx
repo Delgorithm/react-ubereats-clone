@@ -5,10 +5,7 @@ import { FaCartShopping } from 'react-icons/fa6'
 import { FaUser } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
-const FooterMobile = () => {
-
-    // const [cart, setCart] = useState('');
-
+const FooterMobile = ({size}) => {
 
   return (
     <div className='flex justify-around items-center fixed w-screen bg-white bottom-0 h-20'>
@@ -31,7 +28,7 @@ const FooterMobile = () => {
                     <p>Paniers</p>
                 </div>
                 <span className='flex items-center absolute top-0 rounded-full'>
-                    <p>+1</p>
+                    {size}
                 </span>
             </div>
         </Link>
