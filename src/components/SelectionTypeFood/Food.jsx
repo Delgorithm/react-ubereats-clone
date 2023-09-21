@@ -1,5 +1,7 @@
 import React from 'react';
-
+import { FaCodeMerge } from 'react-icons/fa6'
+import { FaStar } from 'react-icons/fa6'
+import { FaAngleRight } from 'react-icons/fa6'
 
 const markets = [
     { 
@@ -185,4 +187,4 @@ const markets = [
   ];  
   
   
-export { mcdoItems, kfcItems, pokeItems};
+export { markets, marketsDisplay,contentByItemId, mcdoItems, kfcItems, pokeItems};

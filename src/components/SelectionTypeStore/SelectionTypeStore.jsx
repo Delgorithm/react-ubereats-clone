@@ -1,11 +1,8 @@
 import React, { useState, useCallback } from 'react'
-import { FaCodeMerge } from 'react-icons/fa6'
 import { FaX } from 'react-icons/fa6'
 import { FaSistrix } from 'react-icons/fa6'
 import { FaEllipsis } from 'react-icons/fa6'
-import { FaStar } from 'react-icons/fa6'
-import { FaAngleRight } from 'react-icons/fa6'
-import { mcdoItems, kfcItems, pokeItems } from '../SelectionTypeFood/Food'
+import { markets, marketsDisplay, contentByItemId, mcdoItems, kfcItems, pokeItems } from '../SelectionTypeFood/Food'
 
 function SelectionTypeStore() {
   
