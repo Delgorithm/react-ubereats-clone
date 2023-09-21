@@ -2,6 +2,7 @@ import React from 'react';
 import FooterMobile from '../../components/Footer/FooterMobile';
 import { FaReceipt } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import { mcdoItems, kfcItems, pokeItems } from '../../components/SelectionTypeStore/SelectionTypeStore';
 
 const Cart = () => {
   const isEmpty = true;
@@ -33,7 +34,9 @@ const Cart = () => {
             </Link>
           </div>
         ) : (
-          <h1>test</h1>
+          <>
+            <h1>test</h1>
+          </>
         )}
       </div>
       <FooterMobile />
